@@ -1,0 +1,35 @@
+---
+import Header from "components/Header.astro"
+import Footer from "components/Footer.astro"
+import Wpp from "components/Wpp.astro"
+import NavBar from "components/NavBar.astro"
+---
+<!doctype html>
+<html lang="es">
+	<head>
+		<link rel="icon" href="src/assets/favicon.ico" />
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/src/styles/global.css">
+		<meta charset="UTF-8" />
+		<meta name="description" content="Sabemos defenderte como usuario y consumidor. Especialistas en reclamos contra empresas, bancos, financieras, prepagas y servicios públicos. Actuamos con firmeza y experiencia para resolver estafas bancarias, créditos no solicitados, inclusión indebida en Veraz y más.">
+		<meta name="viewport" content="width=device-width" />
+		<title>Usuarios y Consumidores</title>
+	</head>
+	<body>
+		<main>
+			<NavBar/>
+			<Wpp/>
+			<slot />
+		</main>
+	</body>
+</html>
+
+
+<style>
+  body {
+    font-family: 'Merriweather', serif;
+  }
+  html {
+  scroll-behavior: smooth;
+}
+</style>

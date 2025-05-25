@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from 'components/Header.astro';
+import Footer from 'components/Footer.astro'
+import Features from 'components/Features.astro'
+import AboutUs from 'components/AboutUs.astro'
+import FAQ from 'components/FAQ.astro'
+import NavBar from 'components/NavBar.astro';
+import Steps from 'components/Steps.astro';
+import Contact from 'components/Contact.astro';
+import ContactForm from 'components/ContactForm'
+import HeaderForm from 'components/HeaderForm'
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title="Defende tus derechos">
+<!-- <NavBar/> -->
+<HeaderForm client:load/>
+<!-- <Header/> -->
+<Features/>
+<AboutUs/>
+<Steps/>
+<FAQ/>
+<!-- <Contact /> -->
+<ContactForm client:load/>
+<Footer/>
+</Layout>
