@@ -49,7 +49,7 @@ export default function ContactForm() {
 
   return (
     <div id="contacto" className="p-4">
-      <div className="grid sm:grid-cols-2 items-start gap-12 p-8 mt-10 mb-10 mx-auto max-w-4xl bg-purple-50 [box-shadow:0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md">
+      <div className="grid sm:grid-cols-2 items-start gap-12 p-8 mt-10 mb-10 mx-auto max-w-4xl bg-purple-100 [box-shadow:0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md">
         <div>
           <h1 className="text-[#6b4a5f] text-3xl font-semibold">¿Te quedó alguna duda?</h1>
           <p className="text-sm text-slate-500 mt-4 leading-relaxed">

@@ -52,9 +52,9 @@ export default function HeaderForm() {
       <img
         width="600"
         height="600"
-        src="https://i.ibb.co/Y4zFNZCj/defendemos-tus-derechos.png"
+        src="https://i.postimg.cc/NM6c17sp/bg-uyc-5.png"
         alt="Abogados y Clientes"
-        className="absolute inset-0 mx-auto w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="relative bg-opacity-1">
         <svg
@@ -69,21 +69,36 @@ export default function HeaderForm() {
         <div className="relative mx-auto overflow-hidden px-4 py-16 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-20">
           <div className="flex flex-col items-center justify-between xl:flex-row">
             <div className="mb-12 w-full max-w-xl xl:mb-0 xl:w-7/12 xl:pr-16">
-              <h2 className="mb-6 max-w-lg font-formal text-3xl font-bold tracking-tight text-white sm:text-7xl sm:leading-none mt-5 md:mt-0">
+<h2 className="mb-6 max-w-lg font-formal text-3xl font-bold tracking-tight text-white sm:text-7xl sm:leading-none mt-5 md:mt-0">
                 Usuarios y Consumidores
               </h2>
-              <p className="mb-4 max-w-xl text-base text-gray-200 md:text-lg font-formal">
-                Defendemos tus derechos con firmeza y experiencia, logrando soluciones rápidas y efectivas.
-              </p>
-              <a
-                href="#servicios"
-                className="inline-flex items-center font-semibold tracking-wider text-[#d2a547] transition-colors duration-200 hover:text-[#d2a568]"
-              >
-                Más información
-                <svg className="ml-2 inline-block w-3" fill="currentColor" viewBox="0 0 12 12">
-                  <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
-                </svg>
-              </a>
+<p
+  className="mb-4 max-w-xl text-base md:text-lg font-formal"
+  style={{
+    color: 'white',
+    textShadow: `
+      0 0 3px rgba(113, 113, 113, 0.8),
+      0 0 5px rgba(109, 106, 106, 0.6),
+      0 0 7px rgba(168, 163, 163, 0.4)
+    `,
+  }}
+>
+  Defendemos tus derechos con firmeza y experiencia, logrando soluciones rápidas y efectivas.
+</p>        
+
+<a
+  href="#servicios"
+  className="inline-flex items-center rounded-sm gap-2 bg-[#d2a547] px-3 py-1.5 text-sm md:text-base font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#c89c3f] hover:shadow-lg"
+>
+  Más información
+  <svg
+    className="w-2 h-2"
+    fill="currentColor"
+    viewBox="0 0 12 12"
+  >
+    <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
+  </svg>
+</a>
             </div>
 
             <div className="w-full max-w-xl xl:w-5/12 xl:px-8">
@@ -94,7 +109,7 @@ export default function HeaderForm() {
                 <form ref={form} onSubmit={sendEmail}>
                   <div className="flex flex-col sm:flex-row gap-4 mb-4">
                     <div className="flex-1">
-                      <label className="mb-1 inline-block font-medium text-emerald-900">Nombre</label>
+                      {/* <label className="inline-block font-medium text-emerald-900">Nombre</label> */}
                      <input   id="name"
   name="nombre"
   type="text"
@@ -110,7 +125,7 @@ export default function HeaderForm() {
                       />
                     </div>
                     <div className="flex-1">
-                      <label className="mb-1 inline-block font-medium text-emerald-900">Teléfono</label>
+                      {/* <label className=" inline-block font-medium text-emerald-900">Teléfono</label> */}
                                    <input  id="phone"
   name="telefono"
   type="tel"
@@ -127,6 +142,20 @@ export default function HeaderForm() {
                     </div>
                   </div>
 
+                  <div className="flex-1">
+  <input
+    id="email"
+    name="email"
+    type="email"
+    placeholder="Email"
+    required
+    maxLength={40}
+    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+    title="Ingresá un email válido"
+    className="h-12 w-full mb-1 rounded border border-gray-300 bg-white px-4 shadow-sm ring-[#d2a547] focus:border-[#d2a547] focus:outline-none focus:ring"
+  />
+</div>
+
                   <div className="mb-4">
                     <label className="mb-1 inline-block font-medium text-emerald-900">Asunto</label>
                     <select
@@ -134,14 +163,15 @@ export default function HeaderForm() {
                       required
                       className="h-12 w-full rounded border border-gray-300 bg-white px-4 shadow-sm ring-[#d2a547] focus:border-[#d2a547] focus:outline-none focus:ring"
                     >
-              <option value="Estafa bancaria">Estafa bancaria</option>
-              <option value="Credito no solicitado">Crédito no solicitado</option>
-              <option value="Veraz indebido">Veraz indebido</option>
-              <option value="Deuda falsa">Deuda falsa</option>
-              <option value="Tarjeta no solicitada">Tarjeta no solicitada</option>
-              <option value="Aumento cuota">Aumento injustificado</option>
-              <option value="Cancelacion no procesada">Cancelación no procesada</option>
-              <option value="Otro">Otro...</option>
+              <option value="Estafa bancaria">Estafa bancaria o débito no autorizado</option>
+              <option value="Credito no solicitado">Créditos o productos no solicitados</option>
+              <option value="Veraz indebido">Inclusión indebida en Veraz u otros registros</option>
+              <option value="Deuda falsa">Incumplimiento en la calidad de un producto o servicio</option>
+              <option value="Tarjeta no solicitada">Cobros indebidos por parte de una prepaga</option>
+              <option value="Aumento cuota">Reclamo contra aerolíneas {`(cancelación, demora, equipaje, etc.)`}</option>
+              <option value="Cancelacion no procesada">Consulta general sobre mis derechos como consumidor</option>
+              <option value="Cancelacion no procesada">Seguimiento de un caso ya iniciado</option>
+              <option value="Cancelacion no procesada">Otros - Quiero iniciar un reclamo con el estudio</option>
                     </select>
                   </div>
 
@@ -154,6 +184,8 @@ export default function HeaderForm() {
                       className="h-22 w-full rounded resize-none border border-gray-300 bg-white px-4 py-3 shadow-sm ring-[#d2a547] focus:border-[#d2a547] focus:outline-none focus:ring"
                     ></textarea>
                   </div>
+
+                  
 
                   <div className="mt-4 mb-2 sm:mb-4">
                     <button
